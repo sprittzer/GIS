@@ -1,0 +1,70 @@
+do $$
+declare
+   year int = 2021;	--переменная для schema year	
+   size int = 20;	--переменная для NDVI размера пикселя
+begin
+	execute 'CREATE TABLE "' || year || '"."' || year || '_NDVI_' || size || '" (
+	id serial4 NOT NULL,
+	geom public.geometry(point, 4326) NULL,
+	"X" float8 not NULL,
+	"Y" float8 not NULL,
+	"NDV1" float8 not NULL,
+	"NDV2" float8 not NULL,
+	"NDV3" float8 not NULL,
+	"NDV4" float8 not NULL,
+	"NDV5" float8 not NULL,
+	"NDV6" float8 not NULL,
+	"NDV7" float8 not NULL,
+	"NDV8" float8 not NULL,
+	"NDV9" float8 not NULL,
+	"NDV10" float8 not NULL,
+	"NDV11" float8 not NULL,
+	"NDV12" float8 not NULL,
+	"NDV13" float8 not NULL,
+	"NDV14" float8 not NULL,
+	"NDV15" float8 not NULL,
+	"NDV16" float8 not NULL,
+	"NDV17" float8 not NULL,
+	"NDV18" float8 not NULL,
+	"NDV19" float8 not NULL,
+	"NDV20" float8 not NULL,
+	"NDV21" float8 not NULL,
+	"NDV22" float8 not NULL,
+	"NDV23" float8 not NULL,
+	"NDV24" float8 not NULL,
+	"NDV25" float8 not NULL,
+	"NDV26" float8 not NULL,
+	"NDV27" float8 not NULL,
+	"NDV28" float8 not NULL,
+	"NDV29" float8 not NULL,
+	"NDV30" float8 not NULL,
+	"NDV31" float8 not NULL,
+	"NDV32" float8 not NULL,
+	"NDV33" float8 not NULL,
+	"NDV34" float8 not NULL,
+	"NDV35" float8 not NULL,
+	"NDV36" float8 not NULL,
+	"NDV37" float8 not NULL,
+	"NDV38" float8 not NULL,
+	"NDV39" float8 not NULL,
+	"NDV40" float8 not NULL,
+	"NDV41" float8 not NULL,
+	"NDV42" float8 not NULL,
+	"NDV43" float8 not NULL,
+	"NDV44" float8 not NULL,
+	"NDV45" float8 not NULL,
+	"NDV46" float8 not NULL,
+	"NDV47" float8 not NULL,
+	"NDV48" float8 not NULL,
+	"NDV49" float8 not NULL,
+	"NDV50" float8 not NULL,
+	"NDV51" float8 not NULL,
+	"NDV52" float8 not NULL,
+	"id_crop_plan" int4 NULL,			-- поле id_crop_plan из общей таблицы всех полей xxxx.xxx_list_of_fields ДЛЯ ПОЛЯ с id_field (подтягивается автоматом по триггеру)
+    "id_crop_pixel_result" int4 NULL,	-- поле из списка id (культура) из таблицы Accounting.list_of_crops
+    "id_field" int4 not null,			-- поле из списка id (номер поля) из общей таблицы всех полей xxxx.xxx_list_of_fields
+	CONSTRAINT "' || year || '_NDVI_' || size || '_pkey" PRIMARY KEY (id),
+	CONSTRAINT "' || year || '_NDVI_' || size || '_un_XY" UNIQUE ("X", "Y")
+);';
+end;
+$$;
