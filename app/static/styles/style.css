@@ -1,0 +1,63 @@
+#MainWindow {
+  background-color: #fff;
+}
+
+#change_btn {
+  padding: 5px;
+  border: none;
+  width: 30px;
+  height: 30px;
+}
+
+#header_widget {
+  background-color: #ededed;
+}
+
+#icon_only_widget {
+  /* background-color: #313a46; */
+  background-color: #c3c7cd;
+  width: 50px;
+}
+
+#icon_only_widget QPushButton, QLabel {
+  height: 50px;
+  border: none;
+}
+
+#icon_only_widget QPushButton:hover {
+  background-color: rgba(86, 101, 115, 0.5);
+}
+
+#logo_label_1 {
+  padding: 5px;
+}
+
+#logo_label_2 {
+  padding: 5px;
+  color: #fff;
+}
+
+#full_sidebar {
+  background-color: #313a46;
+  background-color: #c3c7cd;
+}
+
+#full_sidebar QPushButton {
+  border: none;
+  border-radius: 3px;
+  text-align: left;
+  padding: 8px 0 8px 15px;
+  color: #788596;
+}
+
+#full_sidebar QPushButton:hover {
+  background-color: rgba(86, 101, 115, 0.5);
+}
+
+#full_sidebar QPushButton:checked {
+  background-color: #fff;
+}
+
+#icon_only_widget QPushButton:checked {
+  background-color: #fff;
+}
