@@ -82,7 +82,7 @@ class MainWindow(QMainWindow):
         year = self.year_box.currentText()
         id_field = self.ids_fields.currentText()
         cultures = self.cultures.currentText()
-        if (id_field == '-' and cultures == '-') or (id_field != '-' and id_field != '-'):
+        if (id_field == '-' and cultures == '-') or (id_field != '-' and cultures != '-'):
             self.error_label_v.setText('Выберите либо номер поля, либо с/х культуру')
             return
         conn = psycopg2.connect(
